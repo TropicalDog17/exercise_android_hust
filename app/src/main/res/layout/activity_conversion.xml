@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Conversion">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioGroup
+            android:id="@+id/from_currency_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/from_text"
+            app:layout_constraintTop_toBottomOf="@+id/from_text">
+
+            <TextView
+                android:id="@+id/from_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/from_currency"
+                android:textColor="@color/teal_200"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <RadioButton
+                android:id="@+id/from_option_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btc"
+                android:onClick="onFromRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/from_option_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/eth"
+                android:onClick="onFromRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/from_option_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/doge"
+                android:onClick="onFromRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/from_option_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/usd"
+                android:onClick="onFromRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/from_option_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/eur"
+                android:onClick="onFromRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/from_option_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vnd"
+                android:onClick="onFromRadioButtonClicked"/>
+
+        </RadioGroup>
+
+
+        <RadioGroup
+            android:id="@+id/to_currency_group"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="@+id/from_text"
+            app:layout_constraintTop_toBottomOf="@+id/from_text">
+
+            <TextView
+                android:id="@+id/to_text"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:text="@string/to_currency"
+                android:textColor="@color/teal_200"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:onClick="onToRadioButtonClicked"/>
+
+
+
+            <RadioButton
+                android:id="@+id/to_option_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btc"
+                android:onClick="onToRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/to_option_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/eth"
+                android:onClick="onToRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/to_option_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/doge"
+                android:onClick="onToRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/to_option_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/usd"
+                android:onClick="onToRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/to_option_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/eur"
+                android:onClick="onToRadioButtonClicked"/>
+
+            <RadioButton
+                android:id="@+id/to_option_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vnd"
+                android:onClick="onToRadioButtonClicked"/>
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="404dp"
+        android:layout_weight="1"
+        android:text="ok"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout2"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:text="cancel"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="@+id/button_ok"
+        app:layout_constraintTop_toTopOf="@+id/button_ok" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

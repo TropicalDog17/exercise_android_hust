@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="@string/from"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginHorizontal="20dp"
+        android:ems="10"
+
+        android:hint="@string/enter_a_number"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/text_from"
+        app:layout_constraintTop_toBottomOf="@+id/text_from" />
+
+    <TextView
+        android:id="@+id/text_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginHorizontal="20dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="@string/to"
+        app:layout_constraintStart_toStartOf="@+id/edit_from"
+        app:layout_constraintTop_toBottomOf="@+id/edit_from" />
+
+    <EditText
+        android:id="@+id/edit_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginHorizontal="20dp"
+        android:ems="10"
+        android:hint="@string/result_here"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/text_to"
+        app:layout_constraintTop_toBottomOf="@+id/text_to"
+        android:enabled="false"/>
+
+    <Button
+        android:id="@+id/button_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/convert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_to" />
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/clear"
+        app:layout_constraintBottom_toBottomOf="@+id/button_convert"
+        app:layout_constraintEnd_toEndOf="@+id/edit_to"
+        app:layout_constraintHorizontal_bias="0.719"
+        app:layout_constraintStart_toStartOf="@+id/button_convert"
+        app:layout_constraintTop_toTopOf="@+id/button_convert"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/button_change_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="348dp"
+        android:text="Change Currency"
+        app:layout_constraintStart_toStartOf="@+id/text_from"
+        app:layout_constraintTop_toTopOf="@+id/text_from" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
