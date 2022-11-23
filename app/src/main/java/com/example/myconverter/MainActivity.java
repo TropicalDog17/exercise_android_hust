@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     private String convertTo(double from, double rate){
         DecimalFormat df = new DecimalFormat("#");
         df.setMaximumFractionDigits(10);
-
+        df.setMinimumIntegerDigits(1);
         return df.format(from * rate);
     }
     private void updateCurrencyText(){
