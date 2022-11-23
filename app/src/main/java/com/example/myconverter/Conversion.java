@@ -34,8 +34,7 @@ public class Conversion extends AppCompatActivity {
 
             if (v1 instanceof RadioButton) {
                 String temp = ConstantValues.currency.get(index);
-                Log.d(String.valueOf(index) + "FUCK", temp);
-                Log.d(String.valueOf(index) + "FUCK", fromCurrency);
+
 
                 if(temp.equals(fromCurrency)){
                     ((RadioButton) v1).setEnabled(true);
